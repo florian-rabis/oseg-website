@@ -1,0 +1,8 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+<div class="carousel-item active">
+	{% with blocks=self %}
+		{% for block in blocks %}
+			{{ block }}
+		{% endfor %}
+	{% endwith %}
+</div>

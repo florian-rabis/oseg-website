@@ -1,0 +1,9 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="block-column_block" style="{% if self.max_width %}max-width: {{self.max_width  }}px{% endif %}">
+	{% with blocks=self.body %}
+		{% for block in blocks %}
+			{{ block }}
+		{% endfor %}
+	{% endwith %}
+</div>

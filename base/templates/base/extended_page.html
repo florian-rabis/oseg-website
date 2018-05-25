@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+	{% with blocks=self.body %}
+		
+		{% for block in blocks %}
+			{{ block }}
+		{% endfor %}
+	{% endwith %}
+
+{% endblock %}
